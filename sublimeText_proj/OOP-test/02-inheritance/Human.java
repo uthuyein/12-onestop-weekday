@@ -1,4 +1,4 @@
-class Human{
+class Human {
 	
 	 void sleep(){
 		System.out.println("Sleep on bed !");

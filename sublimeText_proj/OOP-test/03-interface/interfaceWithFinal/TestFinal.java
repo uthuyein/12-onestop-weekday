@@ -17,7 +17,7 @@ class TestFinal{
 		//must be final or effectively final because it is used in local class
 		int data = 10 ;
 		class Data{
-			int a ;
+			
 			void showData(){
 				System.out.println("Show data "+data);
 			}

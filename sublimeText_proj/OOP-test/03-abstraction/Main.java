@@ -1,6 +1,8 @@
 class Main{
 	public static void main(String[] args) {
-		Reaction emoji = new emoji();
+		
+		//By sub class
+		Reaction emoji = new Emoji();
 		emoji.setMessage("Use Emoji");
 		System.out.println(emoji.getMessage());
 
@@ -13,5 +15,21 @@ class Main{
 
 		avator.love();
 		avator.hate();
+
+		//By Anonymous
+		Reaction react = new Reaction(){
+			void love(){
+				System.out.println("React : I love you");
+			}
+
+			void hate(){
+				System.out.println("React : I hate you !");
+			}
+		};
+		react.setMessage("Use React ");
+		System.out.println(react.getMessage());
+
+		react.love();
+		react.hate();
 	}
 }

@@ -23,7 +23,10 @@ class Main extends AboutProtected{
 	}
 
 	void useFromProtected(){
-		doWithDefault();
+		//doWithDefault();
+
+		// doWithProtected method from different pkg 
+		//can access from Main 
 		doWithProtected();
 	}
 }

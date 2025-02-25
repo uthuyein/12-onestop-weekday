@@ -1,4 +1,4 @@
-package com.jdc.mkt;
+package com.jdc.mkt.anno;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

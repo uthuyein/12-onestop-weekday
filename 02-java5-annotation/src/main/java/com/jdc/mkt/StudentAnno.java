@@ -5,6 +5,10 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 
+import com.jdc.mkt.anno.AgeChecker;
+import com.jdc.mkt.anno.GradeAdder;
+import com.jdc.mkt.anno.NameChecker;
+
 public class StudentAnno {
 	
 	@NameChecker("William")

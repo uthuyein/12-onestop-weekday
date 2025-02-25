@@ -13,6 +13,7 @@ public class AnnotationTest {
 		
 		System.out.println(stu.getName());
 		System.out.println(stu.getAge());
+		System.out.println(stu.getClassName());
 		
 		for(Grade g : stu.getGrade()) {
 			System.out.println(g);

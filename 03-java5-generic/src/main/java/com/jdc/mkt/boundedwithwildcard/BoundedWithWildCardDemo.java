@@ -6,6 +6,7 @@ import com.jdc.mkt.utils.C;
 
 public class BoundedWithWildCardDemo {
 
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		Data<A> a =  new Data<>();
 		Data<B> b =  new Data<>();
@@ -18,6 +19,8 @@ public class BoundedWithWildCardDemo {
 		lower(b);
 		lower(a);
 		lower(o);
+		
+		b.setData(new B());
 		
 		Data<? super B> b1 = new Data<>();
 		b.setData(new B());
@@ -34,7 +37,7 @@ public class BoundedWithWildCardDemo {
 	}
 	
 	static void lower(Data<? super B> data) {
-		data.setData(new B());
+		//data.setData(new B());
 		System.out.println("From Lower :"+data.getData());
 	}
 }

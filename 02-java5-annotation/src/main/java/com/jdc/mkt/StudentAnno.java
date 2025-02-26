@@ -13,7 +13,7 @@ import com.jdc.mkt.anno.ParentAnno;
 @ParentAnno("StudentAnno Class")
 public class StudentAnno {
 
-	@NameChecker("William")
+	@NameChecker
 	@NameChecker("John")
 	String name;
 	int age;

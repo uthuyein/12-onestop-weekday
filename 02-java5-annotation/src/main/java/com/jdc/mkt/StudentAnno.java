@@ -8,7 +8,6 @@ import java.lang.reflect.Parameter;
 import com.jdc.mkt.anno.AgeChecker;
 import com.jdc.mkt.anno.GradeAdder;
 import com.jdc.mkt.anno.NameChecker;
-import com.jdc.mkt.anno.NameCheckers;
 import com.jdc.mkt.anno.ParentAnno;
 
 @ParentAnno("StudentAnno Class")
@@ -37,6 +36,7 @@ public class StudentAnno {
 		return name;
 	}
 
+	@SuppressWarnings("rawtypes")
 	private int checkAge(int age) throws NoSuchFieldException, SecurityException, NoSuchMethodException {
 		Constructor[] cons = StudentAnno.class.getConstructors();
 
@@ -64,5 +64,14 @@ public class StudentAnno {
 		}
 		return new Grade[0];
 	}
+	
+	public String getClassName() {
+		ParentAnno anno =  Student.class.getAnnotation(ParentAnno.class);
+		if(null != anno) {
+			return anno.value();
+		}
+		return "No class found";
+	}
+		
 
 }

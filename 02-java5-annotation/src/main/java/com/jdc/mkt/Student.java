@@ -1,7 +1,5 @@
 package com.jdc.mkt;
 
-import com.jdc.mkt.anno.ParentAnno;
-
 public class Student extends StudentAnno{
 	
 	public Student(	String name, int age) throws NoSuchFieldException, SecurityException, NoSuchMethodException {
@@ -20,14 +18,7 @@ public class Student extends StudentAnno{
 		return age;
 	}
 	
-	public String getClassName() {
-		ParentAnno anno =  Student.class.getAnnotation(ParentAnno.class);
-		if(null != anno) {
-			return anno.value();
-		}
-		return "No class found";
-	}
-		
+	
 }
 
 

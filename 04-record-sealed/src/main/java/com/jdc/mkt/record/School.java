@@ -11,4 +11,6 @@ public record School(
 	public String getMajor() {
 		return major;
 	}
+	
+	public void show() {}
 }

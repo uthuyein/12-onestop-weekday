@@ -11,7 +11,13 @@ public class TryCatchTest {
 	TryCatchData data = new TryCatchData();
 	
 	@Test
-	void testTryMultiCath() {
+	void testTryWitchFinally() {
+		String res = data.useCheckedWitchTryFinallyAndResource();
+		System.out.println(res);
+	}
+	
+	//@Test
+	void testTryMultiCatch() {
 		int res1 =  data.useUncheckedWithTryMultiCatch(new int[2], "2");
 		assertEquals(-1, res1);
 		int res2 =  data.useUncheckedWithTryMultiCatch(new int[2], "hello");

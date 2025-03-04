@@ -35,6 +35,7 @@ public class TryCatchData {
 		}			
 	}
 
+	@SuppressWarnings("unused")
 	public String useUncheckedWithTryCatch(Integer num) {
 		try {
 			int i = num / 0 ;

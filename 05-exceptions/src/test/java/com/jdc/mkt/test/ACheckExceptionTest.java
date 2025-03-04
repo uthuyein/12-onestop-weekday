@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import com.jdc.mkt.check.CheckExceptionData;
 
-public class CheckExceptionTest {
+public class ACheckExceptionTest {
 
 	CheckExceptionData data = new CheckExceptionData();
 	

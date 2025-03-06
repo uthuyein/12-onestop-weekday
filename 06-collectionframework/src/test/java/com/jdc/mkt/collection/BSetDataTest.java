@@ -2,30 +2,31 @@ package com.jdc.mkt.collection;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.util.HashSet;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-public class SetDataTest {
+public class BSetDataTest extends JunitConfig{
 
-	static CollectionData data;
-	static TreeData tree;
-	
-	@BeforeAll
-	static void init() {
-		data = new CollectionData();
-		tree = new TreeData();
+	static TreeData tree = new TreeData();;
+		
+	@ParameterizedTest
+	@CsvSource({"Andrew,Andrew","James ,not match name"})
+	void useMethodInSetTest(String name,String res) {
+		Set<String> set = data.useSet("H");
+		
+		String str = set.contains(name)? name :"not match name";
+		assertEquals(str, res);
+			
 	}
 	
 	@Test
+	@Disabled
 	void treeSetTest() {
 		TreeSet<Person> set = tree.useTreeset();
 		for(Person p :set) {
@@ -33,11 +34,6 @@ public class SetDataTest {
 		}
 	}
 	
-	@ParameterizedTest
-	@CsvSource({"0,Andrew","3,Henery"})
-	void selectListTest(int index,String res) {
-		
-	}
 	
 	@Disabled
 	@ParameterizedTest

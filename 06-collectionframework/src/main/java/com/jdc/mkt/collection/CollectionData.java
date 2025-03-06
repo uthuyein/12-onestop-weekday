@@ -1,18 +1,23 @@
 package com.jdc.mkt.collection;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Deque;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Set;
 import java.util.TreeSet;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class CollectionData {
 	static String[] array = { "Andrew","John", "William","Henery","Kelvin" };
+	
 
 	public List<String> useList(String str) {
 		return switch (str) {
@@ -52,12 +57,16 @@ public class CollectionData {
 		};
 	}
 
-	public Queue<String> useQueue() {
-		return null;
+	public Queue<String> useQueue(String s,int capacity) {
+		return switch(s) {
+			case "block" -> new ArrayBlockingQueue<>(capacity);
+			case "priority" -> new PriorityQueue<>();
+			default -> null;
+		};
 	}
 
-	public Deque<String> useDeque() {
-		return null;
+	public ArrayDeque<String> useDeque() {
+		return new ArrayDeque<String>();
 	}
 
 	public Map<Integer, String> useMap() {

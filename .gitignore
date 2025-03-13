@@ -5,3 +5,6 @@ target
 .settings
 .project
 .classpath
+.txt
+.dat
+.obj

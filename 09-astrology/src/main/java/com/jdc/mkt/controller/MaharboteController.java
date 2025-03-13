@@ -1,47 +1,34 @@
 package com.jdc.mkt.controller;
 
-public class MaharboteController{
+import static com.jdc.mkt.utils.Maharbote.getSign;
+import static com.jdc.mkt.utils.MyanmarConverter.convert;
 
-	public String getSign(int myanmarYear, int dayName){
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 
-		String[]signArray = {"Binga","Mayana","Ahtun","Thike","Yaza","Puti","Adipiti"};
+import com.jdc.mkt.dto.User;
 
-		int[] maharboteArray = getMaharBote(myanmarYear);
-		int index = getIndex(dayName,maharboteArray);
-	
-		return signArray[index];
+public class MaharboteController {
+
+
+	public String getResult(User user) {
+		return getSign(convert(user.getYear(), user.getMonth(), user.getDay()), user.getDayName());
 	}
 
-	public int[] getMaharBote(int myanmarYear){
-
-		int []formulaArray = {1,4,0,3,6,2,5};
-		int remainder = myanmarYear % 7 ;
-
-		int index = getIndex(remainder,formulaArray);
-		
-		int [] maharboteArray = new int[formulaArray.length];
-
-		for(int j = 0 ; j < maharboteArray.length ; j ++){
-
-			maharboteArray[j] = formulaArray[index];
+	public void showResult(String sign) {
+		try (BufferedReader br = new BufferedReader(
+				new FileReader(
+						new File("src/main/resources/maharbotes/"+sign.toLowerCase()+".txt")))) {
+			System.out.println(sign);
 			
-			if(index < formulaArray.length ){
-				index ++ ;
+			while(br.ready()) {
+				System.out.println(br.readLine());
 			}
-			if(index == 7){
-				index = 0 ;
-			}
-			
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		return maharboteArray ;
 	}
-	private int getIndex(int remainder,int[] array){
-		int index = 0 ;
-		for(int i = 0 ; i < array.length ; i++){
-			if(array[i] == remainder){
-				index = i ;
-			}
-		}
-		return index;
-	}
+
 }

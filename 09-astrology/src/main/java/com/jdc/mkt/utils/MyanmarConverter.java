@@ -2,7 +2,7 @@ package com.jdc.mkt.utils;
 
 public class MyanmarConverter{
 
-	public int convert(int year,int month,int day){
+	public static int convert(int year,int month,int day){
 		
 		if(month >= 1 && month < 4){		
 				return year - 639 ;			

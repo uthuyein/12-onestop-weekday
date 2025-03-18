@@ -1,7 +1,8 @@
-package com.jdc.mkt;
+package com.jdc.mkt.lambda;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.IntFunction;
 import java.util.function.Predicate;
 
 public class DefultFunctionalInterfaceDemo {
@@ -34,6 +35,8 @@ public class DefultFunctionalInterfaceDemo {
 		Function<Integer, Integer> fCompose = f1.compose(f2);
 		int res2 = fCompose.apply(3);
 		System.out.println("Result for function composing :" + res2);
+		
+		
 	}
 
 	static void useConsumer() {

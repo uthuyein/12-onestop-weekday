@@ -2,7 +2,7 @@ package com.jdc.mkt.lambda;
 
 import org.junit.jupiter.api.Test;
 
-import com.jdc.mkt.LambdaDemo;
+import com.jdc.mkt.lambda.LambdaDemo;
 
 public class LambdaTest {
 

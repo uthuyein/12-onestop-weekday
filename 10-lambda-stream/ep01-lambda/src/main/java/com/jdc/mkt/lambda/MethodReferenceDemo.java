@@ -1,4 +1,4 @@
-package com.jdc.mkt;
+package com.jdc.mkt.lambda;
 
 public class MethodReferenceDemo {
 	

@@ -36,7 +36,7 @@ public class MaharboteController extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		var name = req.getParameter("name");
-		var email = req.getParameter("email");
+		//var email = req.getParameter("email");
 		var dob = LocalDate.parse(req.getParameter("dob"));
 		var dayName = Planet.valueOf(req.getParameter("dayName"));
 		

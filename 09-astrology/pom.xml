@@ -8,11 +8,33 @@
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <dependencies>
-  	<dependency>
-  	 <groupId>org.junit.jupiter</groupId>
-  	 <artifactId>junit-jupiter</artifactId>
-  	 <version>5.11.4</version>
-  	 <scope>test</scope>
+  <dependency>
+	    <groupId>jakarta.servlet</groupId>
+	    <artifactId>jakarta.servlet-api</artifactId>
+	    <version>6.1.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>jakarta.servlet.jsp</groupId>
+	    <artifactId>jakarta.servlet.jsp-api</artifactId>
+	    <version>4.0.0</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>jakarta.servlet.jsp.jstl</groupId>
+	    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+	    <version>3.0.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.glassfish.web</groupId>
+	    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
+	    <version>3.0.1</version>
+	</dependency>
+	<dependency>
+	  	 <groupId>org.junit.jupiter</groupId>
+	  	 <artifactId>junit-jupiter</artifactId>
+	  	 <version>5.11.4</version>
+	  	 <scope>test</scope>
   	</dependency>
   </dependencies>
   <build>
@@ -25,6 +47,11 @@
   		 	<release>21</release>
   		 </configuration>
   		</plugin>
+ 		<plugin>
+		    <groupId>org.eclipse.jetty</groupId>
+		    <artifactId>jetty-maven-plugin</artifactId>
+		    <version>11.0.24</version>
+		</plugin>
   	</plugins>
   </build>
 </project>

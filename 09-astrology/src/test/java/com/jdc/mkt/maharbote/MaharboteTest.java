@@ -1,17 +1,18 @@
 package com.jdc.mkt.maharbote;
 
+import java.time.LocalDate;
+
 import org.junit.jupiter.api.Test;
 
-import com.jdc.mkt.controller.MaharboteController;
-import com.jdc.mkt.dto.User;
+import com.jdc.mkt.calculators.PlanetCalculator;
+import com.jdc.mkt.dto.Planet;
 
 public class MaharboteTest {
 
 	@Test
-	void test() {
-		User user = new User("Andrew", 1983, 01, 06, 5);
-		MaharboteController controller = new MaharboteController();
-		String sign = controller.getResult(user);
-		controller.showResult(sign);
+	void planetSignTest() {
+		PlanetCalculator cal = new PlanetCalculator();
+		Planet planet = cal.getPlanetSign(LocalDate.of(1982, 3, 18), "Thursday");
+		System.out.println(planet);
 	}
 }

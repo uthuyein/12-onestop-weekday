@@ -1,4 +1,4 @@
-package com.jdc.mkt.utils;
+package com.jdc.mkt.converters;
 
 public class MyanmarConverter{
 

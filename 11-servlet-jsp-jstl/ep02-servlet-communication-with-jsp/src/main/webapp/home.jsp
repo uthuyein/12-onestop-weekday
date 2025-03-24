@@ -12,9 +12,9 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<ul class ="mt-3">
-				<li><a href="/include" class="nav-link text-primary">Include Servlet</a></li>
-				<li><a href="/forward" class="nav-link text-primary">Forward Servlet</a></li>
-				<li><a href="/redirect" class="nav-link text-primary">Redirect Servlet</a></li>
+				<li><a href="include" class="nav-link text-primary">Include Servlet</a></li>
+				<li><a href="forward" class="nav-link text-primary">Forward Servlet</a></li>
+				<li><a href="redirect" class="nav-link text-primary">Redirect Servlet</a></li>
 			</ul>
 			
 		</div>

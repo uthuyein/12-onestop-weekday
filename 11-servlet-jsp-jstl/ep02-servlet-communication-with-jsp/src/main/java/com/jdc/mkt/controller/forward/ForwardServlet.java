@@ -17,6 +17,7 @@ public class ForwardServlet extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setAttribute("date", LocalDate.now());
+		System.out.println("Path :::"+getServletContext().getContextPath());
 		req.getRequestDispatcher("/toForward").forward(req, resp);
 	}
 

@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet(urlPatterns = "/", loadOnStartup = 1)
+@WebServlet(urlPatterns = "/counter", loadOnStartup = 1)
 public class CounterServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
@@ -48,7 +48,7 @@ public class CounterServlet extends HttpServlet {
 		c3.countUp();
 		context.setAttribute(COUNTER, c3);
 		
-		req.getRequestDispatcher(getServletContext().getContextPath()).forward(req, resp);
+		req.getRequestDispatcher("index.jsp").forward(req, resp);
 
 	}
 }

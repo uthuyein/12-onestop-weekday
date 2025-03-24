@@ -78,7 +78,6 @@
 
 	</div>
 </body>
-</head>
 </html>
 
 

@@ -44,5 +44,6 @@
   </build>
   <modules>
   	<module>ep01-about-servlet-jsp</module>
+  	<module>ep02-servlet-communication-with-jsp</module>
   </modules>
 </project>

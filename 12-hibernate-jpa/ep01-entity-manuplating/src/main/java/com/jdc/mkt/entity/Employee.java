@@ -1,5 +1,7 @@
 package com.jdc.mkt.entity;
 
+import java.time.LocalDate;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -19,6 +21,7 @@ public class Employee {
 	private Integer id;
 	@Column(nullable = false,length = 45)
 	private String name;
+	private LocalDate dob;
 	@Column(columnDefinition = "tinyint(1) default 1")
 	private boolean active;
 	@ManyToOne

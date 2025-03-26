@@ -15,8 +15,10 @@ public class VoucherDetail {
 
 	@EmbeddedId
 	private VoucherDetailPk id;
+	
 	@Column(columnDefinition = "int default 1")
 	private int qty;
+	
 	@Column(columnDefinition = "int default 0")
 	private int discount;
 	

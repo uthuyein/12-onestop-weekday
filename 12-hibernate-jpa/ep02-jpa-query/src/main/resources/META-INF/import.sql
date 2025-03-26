@@ -1,6 +1,6 @@
 insert into account_tbl(loginId,password,role)values('admin','admin',1);
 insert into account_tbl(loginId,password,role)values('member','member',2);
-insert into account_tbl(loginId,password)values('andrew','ad123');
+insert into account_tbl(loginId,password,role)values('andrew','ad123',2);
 
 insert into address_tbl(address,township,city) values('No.D-36,Between 27×28th Sts,Between 84×85th Sts','Chan Aye Thar Zan','Mandalay');
 insert into address_tbl(address,township,city) values('No.3, 56th Street Quarter (7)','Hlaing','Yangon');
@@ -58,8 +58,7 @@ insert into voucher_detail_tbl(product_id,voucher_id)values(9,6);
 insert into voucher_detail_tbl(product_id,voucher_id)values(2,7);
 insert into voucher_detail_tbl(product_id,voucher_id)values(3,7);
 insert into voucher_detail_tbl(product_id,voucher_id)values(6,8);
-
 insert into voucher_detail_tbl(product_id,voucher_id)values(4,9);
-insert into voucher_detail_tbl(product_id,voucher_id)values(9,9);
-insert into voucher_detail_tbl(product_id,voucher_id)values(1,10);
-insert into voucher_detail_tbl(product_id,voucher_id)values(2,11);
+insert into voucher_detail_tbl(product_id,voucher_id,qty)values(9,9,2);
+insert into voucher_detail_tbl(product_id,voucher_id,qty)values(1,10,3);
+insert into voucher_detail_tbl(product_id,voucher_id,qty)values(2,11,4);

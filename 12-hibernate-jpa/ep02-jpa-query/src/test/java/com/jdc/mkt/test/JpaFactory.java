@@ -1,11 +1,13 @@
 package com.jdc.mkt.test;
 
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 
+import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
@@ -13,6 +15,7 @@ import jakarta.persistence.Persistence;
 public class JpaFactory {
 
 	protected static EntityManagerFactory emf;
+	protected static EntityManager em;
 
 	@BeforeAll
 	protected static void init() {
@@ -25,8 +28,14 @@ public class JpaFactory {
 			emf.close();
 	}
 	
-	@Test
-	void test() {
-		
+	@BeforeEach
+	protected  void createEm() {
+		em = emf.createEntityManager();
+	}
+	
+	@AfterEach
+	protected  void closeEm() {
+		if(null != em && em.isOpen())
+			em.close();
 	}
 }

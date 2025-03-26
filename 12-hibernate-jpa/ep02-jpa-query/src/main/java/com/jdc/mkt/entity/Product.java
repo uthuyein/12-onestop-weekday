@@ -5,14 +5,18 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Index;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.NamedQuery;
 import jakarta.persistence.Table;
 import lombok.Data;
 
 @Data
 @Entity
 @Table(name = "product_tbl" )
+@NamedQuery(name = "pWithBetween",
+	query = "select p from Product p where p.price between :first and :second")
+@NamedQuery(name = "selectProductByCategory",
+	query = "select p from Product p where p.category.name = :category")
 public class Product {
 
 	@Id

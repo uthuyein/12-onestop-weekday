@@ -8,7 +8,7 @@ import com.jdc.mkt.entity.Customer;
 import com.jdc.mkt.entity.Product;
 import com.jdc.mkt.test.JpaFactory;
 
-public class StaticVsDynamicQueryTest extends JpaFactory{
+public class A_StaticVsDynamicQueryTest extends JpaFactory{
 	
 	@Test
 	@Order(2)

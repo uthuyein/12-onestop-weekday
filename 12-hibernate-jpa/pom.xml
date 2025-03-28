@@ -11,7 +11,7 @@
   	<dependency>
   	 <groupId>org.hibernate.orm</groupId>
   	 <artifactId>hibernate-core</artifactId>
-  	 <version>6.6.8.Final</version>
+  	 <version>6.6.11.Final</version>
   	 <scope>provided</scope>
   	</dependency>
   	<dependency>
@@ -41,6 +41,13 @@
   		 <version>3.14.0</version>
   		 <configuration>
   		 	<release>21</release>
+  		 	<annotationProcessorPaths>
+  		 		<annotationProcessorPath>
+  		 			<groupId>org.hibernate</groupId>
+	   				 <artifactId>hibernate-jpamodelgen</artifactId>
+	  				  <version>6.6.11.Final</version>
+  		 		</annotationProcessorPath>
+  		 	</annotationProcessorPaths>
   		 </configuration>
   		</plugin>
   	</plugins>

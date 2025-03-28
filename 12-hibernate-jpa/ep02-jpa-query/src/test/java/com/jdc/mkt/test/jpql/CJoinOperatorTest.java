@@ -12,7 +12,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import com.jdc.mkt.dto.SelectProductNameSaleDateQty;
 import com.jdc.mkt.test.JpaFactory;
 
-public class JoinOperatorTest extends JpaFactory{
+public class CJoinOperatorTest extends JpaFactory{
 	
 	@ParameterizedTest
 	@ValueSource(strings = "Hlaing")

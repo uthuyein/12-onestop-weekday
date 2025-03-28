@@ -5,13 +5,12 @@ import java.util.List;
 
 import com.jdc.mkt.listeners.EnableTimesListener;
 import com.jdc.mkt.listeners.Times;
-import com.jdc.mkt.listeners.TimesListener;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -44,7 +43,10 @@ public class Department implements EnableTimesListener {
 	@Embedded
 	private Times times;
 
-	@OneToMany(mappedBy = "department", cascade = { CascadeType.PERSIST, CascadeType.MERGE })
+	@OneToMany(
+			//fetch = FetchType.EAGER,
+			mappedBy = "department",
+			cascade = { CascadeType.PERSIST, CascadeType.MERGE })
 	private List<Employee> employees = new ArrayList<Employee>();
 
 	public void addEmployee(Employee emp) {

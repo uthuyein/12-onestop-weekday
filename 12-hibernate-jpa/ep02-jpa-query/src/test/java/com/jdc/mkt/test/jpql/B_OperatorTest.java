@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import com.jdc.mkt.entity.Product;
 import com.jdc.mkt.test.JpaFactory;
 
-public class OperatorTest extends JpaFactory{
+public class B_OperatorTest extends JpaFactory{
 
 	@Test
 	void test() {

@@ -14,7 +14,7 @@ import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.persistence.criteria.Root;
 
-public record SelectCategoryProductSaleDateQty(
+public record SearchVoucherDetails(
 		String keyword,
 		LocalDate date,
 		long qty

@@ -56,8 +56,10 @@ public class CJoinOperatorTest extends JpaFactory{
 	})
 	void selectSaleDatefromVoucherByProduct(String name) {
 		var query = em.createQuery("""
-				select v.saleDate from Voucher v join v.voucherDetails vd
-				where vd.product.name = :name
+				select v.saleDate from Voucher v 
+				join v.voucherDetails vd
+				join vd.product p
+				where p.name = :name
 				""",LocalDate.class);
 		query.setParameter("name", name);
 		query.getResultList().forEach(d -> System.out.println(d));

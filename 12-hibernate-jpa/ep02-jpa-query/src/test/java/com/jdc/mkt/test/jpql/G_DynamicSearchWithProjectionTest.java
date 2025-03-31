@@ -24,7 +24,7 @@ public class G_DynamicSearchWithProjectionTest extends JpaFactory{
 		var query = em.createQuery(cq);
 		for(SelectVoucherDetailsInfo info : query.getResultList()) {
 			System.out.println(info.categoryName()+"\t"+info.productName()+"\t"+info.qty()+"\t"+info.saleDate());
-		}
+		} 
 		
 		
 	}

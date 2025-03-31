@@ -55,5 +55,6 @@
   <modules>
   	<module>ep01-entity-manuplating</module>
   	<module>ep02-jpa-query</module>
+  	<module>ep03-servlet-with-criteria</module>
   </modules>
 </project>
